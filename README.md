@@ -114,20 +114,6 @@ CONN_URL=Endpoint=sb://your-namespace.servicebus.windows.net/;SharedAccessKeyNam
 2. Event Stream oluşturup Azure Event Hub'a bağlayın
 3. Eventhouse ve KQL Database oluşturun
 4. KQL'de tabloyu oluşturun: 
-
-```kql
-.create table live_p (
-    ID:  int,
-    Confidence: real,
-    Timestamp: datetime,
-    source: string,
-    Time: string
-)
-
-.create table live_p ingestion json mapping 'live_p_mapping'
-'[{"column":"ID","path":"$. ID"},{"column":"Confidence","path":"$.Confidence"},{"column":"Timestamp","path":"$. Timestamp"},{"column":"source","path":"$.source"},{"column":"Time","path":"$.Time"}]'
-```
-
 5. Event Stream'den Eventhouse'a destination ekleyin
 
 ### Adım 4: Python Uygulamasını Çalıştırma
