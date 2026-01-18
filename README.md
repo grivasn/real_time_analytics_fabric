@@ -255,7 +255,7 @@ live_p
 # Webcam
 results = model.track(source=0, ...)
 
-# Farkl�� video dosyası
+# Farklı video dosyası
 results = model.track(source="baska_video.mp4", ...)
 
 # RTSP stream
